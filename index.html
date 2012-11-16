@@ -8,6 +8,14 @@
     <title>My personal web site (yeah!)</title>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
     <style>
+        h3.muted img {
+            border: 3px solid #dcdcdc;
+            padding: 3px;
+            transform: rotate(-5deg);
+            box-shadow: 3px 3px 6px #aaa;
+            margin-right: 15px;
+        }
+
         .select_categorie_true {
 
         }
@@ -24,6 +32,46 @@
         .nav a:hover {
             transform: rotate(0deg);
         }
+
+        body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+            /* Custom container */
+        .container-narrow {
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        .container-narrow > hr {
+            margin: 30px 0;
+        }
+
+            /* Main marketing message and sign up button */
+        .jumbotron {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            font-size: 72px;
+            line-height: 1;
+        }
+
+        .jumbotron .btn {
+            font-size: 21px;
+            padding: 14px 24px;
+        }
+
+            /* Supporting marketing content */
+        .marketing {
+            margin: 60px 0;
+        }
+
+        .marketing p + h4 {
+            margin-top: 28px;
+        }
     </style>
 </head>
 <body ng-controller="Website">
@@ -36,7 +84,9 @@
                 <a href="#" ng-mouseenter="affiche(menu.id)"><i class="{{menu.icon}}"></i> {{menu.nom}}</a>
             </li>
         </ul>
-        <h3 class="muted">{{titre}}</h3>
+        <h3 class="muted"><img
+                src="https://secure.gravatar.com/avatar/7843bb075c05be6886a97b77e36758ff?s=80&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"/>{{titre}}
+        </h3>
     </div>
 
     <hr>
@@ -45,9 +95,10 @@
         <h1>{{item.titre}}</h1>
 
         <p class="lead">{{item.contenu}}</p>
+        <a href="{{item.liens}}"><i class="icon-share"></i> {{item.liens}}</a>
+        <hr>
     </div>
 
-    <hr>
 </div>
 </body>
 </html>
