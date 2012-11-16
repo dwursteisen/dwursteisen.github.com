@@ -3,14 +3,14 @@ function Website($scope) {
     $scope.titre = 'Mon site web personnel !';
 
     $scope.categories = [
-        {nom:'Projets'},
-        {nom:'Présentations'},
-        {nom:'Articles'}
+        {nom:'Projets', id:'projets', icon:'icon-hdd'},
+        {nom:'Présentations', id:'presentations', icon:'icon-bullhorn'},
+        {nom:'Articles', id:'articles', icon:'icon-pencil'}
     ];
 
     $scope.items = [
-        {titre:'image-api', contenu:'blablabla'},
-        {titre:'gp-parser', contenu:'blablabla'},
-        {titre:'TDD Quest', contenu:'blablabla'}
+        {categorie_id:'projets', titre:'image-api', contenu:'blablabla'},
+        {categorie_id:'projets', titre:'gp-parser', contenu:'blablabla'},
+        {categorie_id:'presentations', titre:'TDD Quest', contenu:'blablabla'}
     ];
 }
