@@ -6,6 +6,15 @@
     <script src="website.js"></script>
     <title>My personal web site (yeah!)</title>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+        .select_categorie_true {
+
+        }
+
+        .select_categorie_false {
+            display: none;
+        }
+    </style>
 </head>
 <body ng-controller="Website">
 
@@ -13,14 +22,16 @@
 
     <div class="masthead">
         <ul class="nav nav-pills pull-right">
-            <li ng-repeat="menu in categories"><a href="#"><i class="{{menu.icon}}"></i> {{menu.nom}}</a></li>
+            <li ng-repeat="menu in categories">
+                <a href="#" ng-mouseenter="affiche(menu.id)"><i class="{{menu.icon}}"></i> {{menu.nom}}</a>
+            </li>
         </ul>
         <h3 class="muted">{{titre}}</h3>
     </div>
 
     <hr>
 
-    <div class="jumbotron" ng-repeat="item in items">
+    <div class="jumbotron select_categorie_{{item.visible}}" ng-repeat="item in items">
         <h1>{{item.titre}}</h1>
 
         <p class="lead">{{item.contenu}}</p>

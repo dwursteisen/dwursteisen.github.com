@@ -9,8 +9,14 @@ function Website($scope) {
     ];
 
     $scope.items = [
-        {categorie_id:'projets', titre:'image-api', contenu:'blablabla'},
-        {categorie_id:'projets', titre:'gp-parser', contenu:'blablabla'},
-        {categorie_id:'presentations', titre:'TDD Quest', contenu:'blablabla'}
+        {categorie_id:'projets', titre:'image-api', contenu:'blablabla', visible:true},
+        {categorie_id:'projets', titre:'gp-parser', contenu:'blablabla', visible:true},
+        {categorie_id:'presentations', titre:'TDD Quest', contenu:'blablabla', visible:true}
     ];
+
+    $scope.affiche = function (categorie_id) {
+        $scope.items.forEach(function (item) {
+            item.visible = (item.categorie_id === categorie_id);
+        });
+    }
 }
