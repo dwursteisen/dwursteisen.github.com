@@ -42,7 +42,7 @@ window.AllDataAreBelongToUs = [
     {
         categorie_id:'articles',
         titre:'JSR 353 : Java API for JSON Processing',
-        contenu:'API pour produire/consomer du json via Java EE 7',
+        contenu:'API pour produire/consommer du json via Java EE 7',
         liens:'http://blog.soat.fr/2012/11/devoxx-2012-jsr-353-java-api-for-json-processing/',
         visible:false
     }
