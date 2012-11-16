@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
     <script src="http://cdn.jsdelivr.net/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="data.js"></script>
     <script src="website.js"></script>
     <title>My personal web site (yeah!)</title>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -14,14 +15,6 @@
             transform: rotate(-5deg);
             box-shadow: 3px 3px 6px #aaa;
             margin-right: 15px;
-        }
-
-        .select_categorie_true {
-
-        }
-
-        .select_categorie_false {
-            display: none;
         }
 
         .nav a {
@@ -91,11 +84,11 @@
 
     <hr>
 
-    <div class="jumbotron select_categorie_{{item.visible}}" ng-repeat="item in items">
+    <div class="jumbotron" ng-repeat="item in items" ng-show="item.visible">
         <h1>{{item.titre}}</h1>
 
         <p class="lead">{{item.contenu}}</p>
-        <a href="{{item.liens}}"><i class="icon-share"></i> {{item.liens}}</a>
+        <a href="{{item.liens}}" ng-show="item.liens"><i class="icon-share"></i> {{item.liens}}</a>
         <hr>
     </div>
 
