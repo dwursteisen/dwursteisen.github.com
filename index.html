@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="website.js"></script>
+    <title>My personal web site (yeah!)</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+</head>
+<body ng-controller="Website">
+
+<div class="container-narrow">
+
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li ng-repeat="menu in categories"><a href="#">{{menu.nom}}</a></li>
+        </ul>
+        <h3 class="muted">{{titre}}</h3>
+    </div>
+
+    <hr>
+
+    <div class="jumbotron" ng-repeat="item in items">
+        <h1>{{item.titre}}</h1>
+
+        <p class="lead">{{item.contenu}}</p>
+    </div>
+
+    <hr>
+</div>
+</body>
+</html>
