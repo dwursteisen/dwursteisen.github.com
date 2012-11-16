@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="website.js"></script>
     <title>My personal web site (yeah!)</title>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -13,6 +14,15 @@
 
         .select_categorie_false {
             display: none;
+        }
+
+        .nav a {
+            transition: all 80ms ease;
+            transform: rotate(-10deg);
+        }
+
+        .nav a:hover {
+            transform: rotate(0deg);
         }
     </style>
 </head>
